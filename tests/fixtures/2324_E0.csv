@@ -1,0 +1,4 @@
+Div,Date,Time,HomeTeam,AwayTeam,FTHG,FTAG,FTR,Referee,HC,AC,HY,AY,HR,AR,PSH,PSD,PSA,PSCH,PSCD,PSCA,AvgCH,AvgCD,AvgCA,P>2.5,P<2.5,PC>2.5,PC<2.5,AHh,PAHH,PAHA,AHCh,PCAHH,PCAHA
+E0,11/08/2023,20:00,Burnley,Man City,0,3,A,C Pawson,2,9,1,2,0,0,9.5,5.4,1.33,12.0,6.0,1.25,11.0,5.8,1.27,2.1,1.75,2.2,1.7,1.5,1.9,2.0,1.75,1.95,1.95
+E0,12/08/2023,12:30,Arsenal,Nott'm Forest,2,1,H,M Oliver,10,3,0,2,0,0,1.2,6.5,15.0,1.17,7.5,17.0,1.16,7.2,16.0,1.9,1.95,1.85,2.0,-1.75,1.95,1.95,-2.0,2.0,1.9
+E0,12/08/2023,15:00,Bournemouth,West Ham,1,1,D,P Tierney,5,4,1,1,0,0,2.9,3.6,2.5,2.8,3.5,2.7,2.8,3.5,2.6,2.1,1.78,2.0,1.85,0.0,1.9,2.0,0.0,1.88,2.02

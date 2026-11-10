@@ -1,0 +1,58 @@
+name: snapshot
+on:
+  schedule:
+    - cron: "*/15 11-22 * * 5,6,0,1"   # Fri-Mon, every 15 min (usually a no-op; only spends credits near kickoff)
+    - cron: "0 8,12 * * 4"             # Thu: opening-price pulls for the weekend
+    - cron: "*/20 17-21 * * 2,3"       # Tue/Wed evenings: midweek fixtures
+  workflow_dispatch:
+    inputs:
+      force_open:
+        description: "Force an opening-price pull now"
+        type: boolean
+        default: false
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare data branch (created on first run)
+        run: |
+          git config user.name "fqae-bot"
+          git config user.email "fqae-bot@users.noreply.github.com"
+          git fetch origin data || true
+          if git show-ref --verify --quiet refs/remotes/origin/data; then
+            git worktree add -B data store origin/data
+          else
+            git worktree add --detach store
+            (cd store && git checkout --orphan data && git rm -rf . -q && git commit --allow-empty -m "init data branch")
+          fi
+
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --locked
+
+      - name: Take snapshot
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.force_open }}" = "true" ]; then ARGS="--force-open"; fi
+          uv run python -m fqae.jobs.snapshot --store store $ARGS
+
+      - name: Commit data
+        run: |
+          cd store
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "snapshot $(date -u +%FT%TZ)"
+            git push origin data
+          fi
