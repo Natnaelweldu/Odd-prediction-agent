@@ -4,3 +4,8 @@ odds_api,2026-11-19T16:53:09Z,2,https://api.the-odds-api.com/v4/sports/soccer_sp
 odds_api,2026-11-19T16:53:09Z,2,https://api.the-odds-api.com/v4/sports/soccer_italy_serie_a/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
 odds_api,2026-11-19T16:53:09Z,2,https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
 odds_api,2026-11-19T16:53:09Z,2,https://api.the-odds-api.com/v4/sports/soccer_france_ligue_one/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
+odds_api,2026-11-20T18:57:25Z,2,https://api.the-odds-api.com/v4/sports/soccer_epl/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
+odds_api,2026-11-20T18:57:25Z,2,https://api.the-odds-api.com/v4/sports/soccer_spain_la_liga/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
+odds_api,2026-11-20T18:57:25Z,2,https://api.the-odds-api.com/v4/sports/soccer_italy_serie_a/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
+odds_api,2026-11-20T18:57:25Z,2,https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
+odds_api,2026-11-20T18:57:25Z,2,https://api.the-odds-api.com/v4/sports/soccer_france_ligue_one/odds?markets=h2h%2Ctotals&oddsFormat=decimal&regions=eu
