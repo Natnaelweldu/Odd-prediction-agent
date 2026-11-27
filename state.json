@@ -1,19 +1,21 @@
 {
- "credits_remaining_reported": "469",
+ "credits_remaining_reported": "459",
  "last_pull": {
   "soccer_epl": {
+   "close": "2026-11-27T19:47:53Z",
    "open": "2026-11-26T00:54:41Z"
   },
   "soccer_france_ligue_one": {
-   "open": "2026-11-26T00:54:41Z"
+   "open": "2026-11-27T19:47:53Z"
   },
   "soccer_germany_bundesliga": {
-   "open": "2026-11-26T00:54:41Z"
+   "open": "2026-11-27T19:47:53Z"
   },
   "soccer_italy_serie_a": {
-   "open": "2026-11-26T00:54:41Z"
+   "open": "2026-11-27T19:47:53Z"
   },
   "soccer_spain_la_liga": {
+   "close": "2026-11-27T19:47:53Z",
    "open": "2026-11-26T00:54:41Z"
   }
  }
